@@ -1,0 +1,26 @@
+<h2 id='title'>Sign up and start right away!</h2>
+{{#form-for controller}}
+  {{#input email}}
+  {{label-field email text="Email"}}
+   {{input-field email class="form-control"}}
+   {{#if view.showError}}
+      {{error-field email}}
+    {{/if}}
+  {{/input}}
+  {{#input password}}
+    {{label-field password text="Password"}}
+    {{input-field password class="form-control"}}
+    {{#if view.showError}}
+      {{error-field password}}
+    {{/if}}
+  {{/input}}
+  {{#input passwordConfirmation}}
+    {{label-field passwordConfirmation text="Confirm Password"}}
+    {{input-field passwordConfirmation class="form-control"}}
+    {{#if view.showError}}
+      {{error-field passwordConfirmation}}
+    {{/if}}
+  {{/input}}
+  <button type="submit" class="btn btn-primary save-button" {{action "save" model}}>Save</button>
+{{/form-for}}
+{{outlet}}

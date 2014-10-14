@@ -4,6 +4,10 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+
+app.import('bower_components/ember-validations/index.js');
+app.import('bower_components/ember-easyForm/index.js');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
